@@ -9,8 +9,11 @@ const codeMapping = {
   "02d": "PARTLY_CLOUDY_DAY",
   "02n": "PARTLY_CLOUDY_NIGHT",
 
-  "03d": "CLOUDY",
-  "03n": "CLOUDY",
+  "03d": "PARTLY_CLOUDY_DAY",
+  "03n": "PARTLY_CLOUDY_NIGHT",
+
+  "04d": "CLOUDY",
+  "04n": "CLOUDY",
 
   "09n": "RAIN",
   "09d": "RAIN",
@@ -31,8 +34,8 @@ const codeMapping = {
   return(
 <ReactAnimatedWeather
     icon={codeMapping[props.code]}
-    color="black"
-    size= {54}
+    color="#1e1e1e"
+    size= {props.size}
     animate={true}
   />
   );

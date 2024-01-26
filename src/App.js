@@ -1,14 +1,13 @@
 import React from "react";
 import Weather from "./Weather";
-
-import './App.css';
+import "./App.css";
 
 export default function App() {
   return (
     <div className="App">
       <div class="container">
-        <Weather defaultCity= "Johannesburg"/>
-<footer>
+        <Weather defaultCity="Johannesburg" />
+        <footer>
           This Project was code by{" "}
           <a href="" target="_blank">
             TP Raphulu
@@ -19,6 +18,9 @@ export default function App() {
             target="_blank"
           >
             Open-Sourced on GitHub
+          </a>{" "}
+          and <a href="https://spectacular-marshmallow-348d2e.netlify.app/">
+            hosted on Netlify 
           </a>
         </footer>
       </div>
