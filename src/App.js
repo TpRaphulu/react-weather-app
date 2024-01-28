@@ -5,24 +5,36 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <h1>React Weather App</h1>
-      This project was coded by{" "}
-      <a
-        rel="noreferrer"
-        href="https://magenta-khapse-6f3ded.netlify.app/"
-        target="_blank"
-      >
-        Thabiso Raphulu
-      </a>{" "}
-      and is
-      <a
-        rel="noreferrer"
-        href="https://github.com/TpRaphulu/react-weather-app"
-        target="_blank"
-      >
-        {" "}
-        open-sourced on GitHub
-      </a>
+      <div className="container">
+        <Weather defaultCity="New York" />
+
+        <footer>
+          This project was coded by{" "}
+          <a
+            href="https://www.shecodes.io/graduates/77611-thabiso-paulinah-raphulu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thabiso Raphulu
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/TpRaphulu/react-weather-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://charming-truffle-4fbaf7.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }
