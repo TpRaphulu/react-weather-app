@@ -1,6 +1,6 @@
 import React from "react";
-import Weather from "./Weather";
 import "./App.css";
+import Weather from "./Weather";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            TP Raphulu
+            Thabiso Raphulu
           </a>{" "}
           and is{" "}
           <a
