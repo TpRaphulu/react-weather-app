@@ -1,3 +1,7 @@
+.weather body {
+  background-color: #caa9aa;
+}
+
 .Weather {
   font-family: Arial, sans-serif;
   border: 1px solid #dadde1;

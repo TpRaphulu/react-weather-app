@@ -5,17 +5,16 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
-        <Weather defaultCity="New York" />
-
+      <div class="container">
+        <Weather defaultCity="Johannesburg" />
         <footer>
-          This project was coded by{" "}
+          This Project was coded by{" "}
           <a
-            href="https://www.shecodes.io/graduates/77611-thabiso-paulinah-raphulu"
+            href="https://www.shecodes.io/hall-of-fame?q=Thabiso+Paulinah+Raphulu&commit=Search "
             target="_blank"
             rel="noopener noreferrer"
           >
-            Thabiso Raphulu
+            TP Raphulu
           </a>{" "}
           and is{" "}
           <a
@@ -23,15 +22,15 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            open-sourced on GitHub
+            Open-Sourced on GitHub
           </a>{" "}
           and{" "}
           <a
-            href="https://charming-truffle-4fbaf7.netlify.app/"
+            href="https://app.netlify.com/sites/snazzy-caramel-b75eb2/overview"
             target="_blank"
             rel="noopener noreferrer"
           >
-            hosted on Netlify
+            hosted on netlify{" "}
           </a>
         </footer>
       </div>
