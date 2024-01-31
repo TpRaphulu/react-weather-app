@@ -5,39 +5,46 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
-const [weatherData, setWeatherData] = useState({ ready: false});
-const [city, setCity] = useState(props.defaultCity);
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
-function handleResponse(response) {
-setWeatherData({
-  ready: true,
-  coordinates: response.data.coord,
-  temperature: response.data.main.temp,
-  humidity: response.data.main.temp,
-  date: new Date(response.data.dt * 1000),
-  description: response.data.weather[0].description,
-  icon: response.data.weather[0].icon,
-  wind: response.data.wind.speed,
-  city: response.data.main.name
-});
-}
+  function handleResponse(response) {
+    setWeatherData({
+      ready: true,
+      coordinates: response.data.coord,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      wind: response.data.wind.speed,
+      city: response.data.main.name,
+    });
+  }
 
-function search(){
-  const apiKey = "ad793a6d772939c31783de5822791acf";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(handleResponse); 
-}
+  function search() {
+    const apiKey = "ad793a6d772939c31783de5822791acf";
 
-function handleSubmit(event){
-  event.preventDeefault();
-  search();
-}
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
-function handleCityChange(event) {
-setCity(event.target.value);
-}
+  function handleSubmit(event) {
+    event.preventDeefault();
+    search();
+  }
 
-if (weatherData.ready) {
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
@@ -64,8 +71,8 @@ if (weatherData.ready) {
         <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
-}else {
-  search();
-  return "Loading...";
-}
+  } else {
+    search();
+    return "Loading...";
+  }
 }
