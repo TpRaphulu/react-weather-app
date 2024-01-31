@@ -1,6 +1,6 @@
 .Weather {
   font-family: arial, sans-serif;
-  color: #878787;
+  color: #5b3854;
   padding: 16px;
   border-radius: 5px;
 }
@@ -11,7 +11,7 @@
 }
 
 .btn {
-  background-color: #ed5082;
+  background-color: #6c3d4c;
   border: none;
   height: 40px;
   max-width: 100px;
@@ -70,16 +70,16 @@
 }
 .humidity,
 .wind {
-  color: #ed5082;
+  color: #483343;
 }
 
 .WeatherForecast-temperature-max,
 .WeatherForecast-temperature-min {
-  color: #ed5082;
+  color: #483343;
 }
 
 .WeatherTemperature .unit a {
-  color: #ed5082;
+  color: #483343;
 }
 
 .WeatherTemperature .unit {
@@ -93,6 +93,6 @@
 }
 
 footer a {
-  color: #ed5082;
+  color: #60124e;
   text-decoration: none;
 }
