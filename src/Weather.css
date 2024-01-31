@@ -1,26 +1,30 @@
-.Weather body {
-  background-color: #caa9aa;
-}
-
 .Weather {
-  font-family: Arial, sans-serif;
-  border: 1px solid #dadde1;
+  font-family: arial, sans-serif;
+  color: #878787;
   padding: 16px;
-  margin: 30px auto;
-  max-width: 600px;
-  border-radius: 4px;
-  color: rgb(135, 135, 135);
+  border-radius: 5px;
 }
 
-.Weather form {
-  margin-bottom: 20px;
+.form-control {
+  background-color: #f9f9f9;
+  height: 40px;
 }
 
-.Weather h1 {
-  font-size: 24px;
-  font-weight: 100;
-  margin-bottom: 20px 0 0 0;
+.btn {
+  background-color: #ed5082;
+  border: none;
+  height: 40px;
+  max-width: 100px;
+}
+
+.Weather h2 {
+  display: block;
+  font-size: 30px;
+
+  font-weight: bold;
   line-height: 29px;
+  margin: 20px 0 10px 0;
+  color: black;
 }
 
 .Weather ul {
@@ -36,25 +40,59 @@
 }
 
 .Weather canvas {
-  margin: 10px auto;
+  margin-right: 5px;
+  margin-top: 5px;
+  display: inline-block;
 }
 
 .Weather .temperature {
   font-weight: bold;
-  color: rgb(33, 33, 33);
   font-size: 64px;
-  line-height: 64px;
-  margin-left: 5px;
   font-weight: 400;
-  margin-left: 10px;
+  color: black;
+  line-height: 64px;
 }
 
 .Weather .unit {
   color: rgb(33, 33, 33);
   font-size: 16px;
+  font-style: normal;
   font-weight: 400;
   position: relative;
-  line-height: 1;
   top: -34px;
-  margin-left: 0px;
+  margin-left: 0;
+  line-height: 1;
+}
+
+.humidityWind {
+  position: relative;
+  left: 80px;
+}
+.humidity,
+.wind {
+  color: #ed5082;
+}
+
+.WeatherForecast-temperature-max,
+.WeatherForecast-temperature-min {
+  color: #ed5082;
+}
+
+.WeatherTemperature .unit a {
+  color: #ed5082;
+}
+
+.WeatherTemperature .unit {
+  margin-left: 3px;
+}
+
+.dayTime {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: #ed5082;
+  text-decoration: none;
 }

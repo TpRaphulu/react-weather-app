@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForecast from "./WeatherForecast";
-import axios from "axios";
+import WeatherForecast from "./WeatherForecast.js";
 import "./Weather.css";
+import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-
   function handleResponse(response) {
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
-      humidity: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
+      humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      icon: response.data.weather[0].icon,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
-      city: response.data.main.name,
+      city: response.data.name,
     });
   }
 
@@ -36,7 +35,7 @@ export default function Weather(props) {
   }
 
   function handleSubmit(event) {
-    event.preventDeefault();
+    event.preventDefault();
     search();
   }
 
@@ -52,7 +51,7 @@ export default function Weather(props) {
             <div className="col-9">
               <input
                 type="search"
-                placeholder="Enter a City..."
+                placeholder="Enter a city..."
                 className="form-control"
                 autoFocus="on"
                 onChange={handleCityChange}
@@ -62,7 +61,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-secondary w-100"
+                className="btn btn-primary w-100"
               />
             </div>
           </div>
